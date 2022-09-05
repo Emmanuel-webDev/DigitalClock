@@ -1,50 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitalClock</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
-        @media (min-width:230px) {
-            body{
-            margin: 0;
-            font-family:'Epilogue', sans-serif ;
-        }
-section{
-    display:grid;
-    place-items: center;
-    margin-top: 50%;
-}
-p{
-    text-align: center;
-    display: flex;
-}
-        }
-        @media (min-width:1000px) {
-            body{
-            margin: 0;
-            font-family:'Epilogue', sans-serif ;
-        }
-section{
-    display:grid;
-    place-items: center;
-    margin-top: 15%;
-}
-        }
-       
-    </style>
+    <title>Digital Clock</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <section>
-        <p id="days"></p>
-        <h1 id="demo"></h1>
-        <p id="par"></p>
-    
-    </section>
-   
+    <section class="flex flex-col h-max-screen items-center h-screen justify-center bg-gray-300">
+        <p class="font-bold font-style: italic animate-pulse" id="days"></p>
+        <h1 class="font-bold font-style: italic animate-pulse" id="demo"></h1>
+        <p class="font-bold font-style: italic animate-pulse" id="par"></p></section>
     <script>
         function time(){
             let d = new Date();
@@ -65,11 +34,8 @@ section{
             document.getElementById('par').innerHTML= "Good Evening, Hope your day was awesome?"
         }
         }
-       
-      setInterval(time, 1000);
-        
-
-     
+      setInterval(time, 1000);     
     </script>
 </body>
+
 </html>
